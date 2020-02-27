@@ -18,6 +18,7 @@ public class WebTokenApplication extends SpringBootServletInitializer {
 	} 
 
 	public static void main(String[] args) {
+		System.setProperty("server.servlet.context-path", "/WebToken");
 		SpringApplication.run(WebTokenApplication.class, args);
 	}
 
