@@ -31,7 +31,7 @@ public class AuthenticationController {
 	@Autowired
 	private JWTUserDetailService userService;
 	
-	@RequestMapping(name = "authenticate" ,method = RequestMethod.POST ,value = "/api/authenticate")
+	@RequestMapping(method = RequestMethod.POST ,value = "/api/authenticate")
 	public ResponseEntity<?> authenticate(@RequestBody  Request request){
 	
 		manager.authenticate(
@@ -45,7 +45,7 @@ public class AuthenticationController {
 		return ResponseEntity.ok(new Response().setToken(token).getToken());
 	}
 	
-	@RequestMapping(name = "sayHello" ,method = RequestMethod.GET ,value = "/api/sayHello/{param}")
+	@RequestMapping(method = RequestMethod.GET ,value = "/api/sayHello/{param}")
 	public ResponseEntity<?> sayHello(@PathVariable("param")  String param){
 	
 	  
